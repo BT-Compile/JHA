@@ -1,0 +1,161 @@
+/*-----Tags-----*/
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #1C1C28;
+}
+
+footer {
+    text-decoration: none !important;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+hr {
+    border: solid white 0;
+    border-width: 3px;
+    max-width: 250px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-top: 1px;
+}
+
+textarea {
+    margin: 10px 0 10px 0;
+    font-family: "Urbanist", sans-serif;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/*-----Classes-----*/
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.btn-close {
+    background-color: white;
+}
+
+.btn-dark {
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    width: 150px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.btn-dark:hover,
+.btn-dark:active {
+    background-color: #383838;
+    color: white;
+    text-decoration: underline;
+    text-decoration-thickness: 2px
+}
+
+.buttonnav {
+    display: flex;
+    margin: auto;
+}
+
+.colcontainer {
+    margin: 0 0 10px 0;
+    display: flex;
+    background-color: #24253B;
+    border-radius: 25px;
+    height: 65vh;
+    overflow: hidden;
+}
+
+.dropbox {
+    width: 100%;
+    margin: 10px 0 10px 0;
+}
+
+.fontbebas {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.fontub {
+    font-family: "Urbanist", sans-serif;
+}
+
+.infobox {
+    color: white;
+    padding: 15px;
+    height: 85%;
+    overflow: auto;
+}
+
+.leftcol {
+    padding: 10px;
+    width: 50%;
+}
+
+.modal-content {
+    color: white;
+    background-color: #24253B;
+}
+
+.namecard {
+    display: flex;
+    margin: 2px 0 2px 0;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+.namecard p {
+    margin: auto;
+    font-size: 20pt;
+}
+
+.navbar-brand {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    text-decoration: none;
+    color: red;
+}
+
+.rightcol {
+    padding: 10px;
+    width: 50%;
+}
+
+.testborder {
+    border: black 1pt solid;
+}
+
+.titletxt {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+}
