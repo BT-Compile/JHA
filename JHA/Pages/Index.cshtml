@@ -83,7 +83,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form id="editForm" method="post" asp-page-handler="Edit" asp-route-handler="OnPostEdit">
+                <form method="post" asp-page-handler="Edit" asp-route-handler="OnPostEdit">
                     <label>Pick a Task to Edit</label>
                     <select class="newlogfield dropbox" onchange="showFields(this)">
                         <option value="">Select a Task</option>
@@ -96,7 +96,7 @@
                     @foreach (var hazard in Model.hazards)
                     {
                         <div id="formFields_@hazard.ID" style="display: none;">
-                            <input asp-for="@hazard.ID" type="hidden" name="ID" value="@hazard.ID" />
+                            <input asp-for="@hazard.ID" type="hidden" name="ID" value="@hazard.ID"/>
                             <div class="form-group">
                                 <label>Rename</label>
                                 <textarea asp-for="@hazard.Name" class="form-control" rows="1" name="name" required>@hazard.Name</textarea>

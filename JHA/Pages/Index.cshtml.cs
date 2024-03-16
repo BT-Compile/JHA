@@ -11,8 +11,6 @@ namespace JHA.Pages
         [BindProperty]
         public Data newHazard { get; set; }
 
-        public Data editHazard { get; set; }
-
         public List<Data> hazards { get; set; }
 
         public int numID;
@@ -21,7 +19,6 @@ namespace JHA.Pages
         {
             hazards = new List<Data>();
             newHazard = new Data();
-            editHazard = new Data();
         }
 
         public IActionResult OnGet()
@@ -54,7 +51,8 @@ namespace JHA.Pages
         {
             // Query to add new task and corresponding data into database
             string queryString = $"INSERT INTO hazard (name, steps, consequences, controls, training, equip) " +
-                                 $"VALUES ('{newHazard.Name}', '{newHazard.Steps}', '{newHazard.Consequences}', '{newHazard.Controls}', '{newHazard.Training}', '{newHazard.Equipment}')";
+                                 $"VALUES ('{newHazard.Name}', '{newHazard.Steps}', '{newHazard.Consequences}', " +
+                                 $"'{newHazard.Controls}', '{newHazard.Training}', '{newHazard.Equipment}')";
 
             // Execute the INSERT query
             DBClass.dataInsert(queryString);
