@@ -20,10 +20,8 @@ Those issues will be outlined below as well as any relevant information that nee
 
 
 <b>Bugs and Issues:<b>
-* If the user while creating a new task adds line breaks within the text area the information will not display on the right column,
-  this is due to how "particular" javascript and HTML interacts with ASP.NET. The data still is created within the database, it just does not show in the application
-* Originally, I had a script that would allow the data to populate and display all the textfields within the editing modal upon selecting a task, this ended up only allowing the ability to
-  edit the first entry. For the sake of function over form, I reversed it to empty text boxes so that it works flawlessly.
+* If the user while creating a new task adds line breaks within the text area the information will not display on the right column. This is because html and asp.net interpet newline characters in different ways.
+  The data still is created within the database, it just does not show in the application.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
