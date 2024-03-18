@@ -24,10 +24,6 @@ Those issues will be outlined below as well as any relevant information that nee
   The data still is created within the database, it just does not show in the application.
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -70,8 +66,6 @@ _The instructions below will help you get fully set up._
    <img src=./JHA/wwwroot/images/readme/start.PNG />
    <br />
    <br />
-   
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- CONTACT -->
@@ -87,5 +81,3 @@ Project Link: [Link to the Repo](https://github.com/BT-Compile/JHA)
 Thank you so much for the opportunity to do this project and interact with you all!
 <br />
 I look forward to hearing from you!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
