@@ -43,8 +43,8 @@ Those issues will be outlined below as well as any relevant information that nee
 
 _The instructions below will help you get fully set up._
 
-1. Download Microsoft Visual Studio and install "ASP.NET and web developement", ".NET desktop developement", and "Data storage and processing" options.
-2. Download and Install MySqlServer when prompted for a password for your localhost type "password".
+1. Download <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2022 Community Edition</a> and install "ASP.NET and web developement", ".NET desktop developement", and "Data storage and processing" options.
+2. Download and Install <a href="https://dev.mysql.com/downloads/">MySqlServer</a>, then when prompted for a password for your localhost type "password".
 3. Download the entire zipped file from GitHub.
    <br />
    <br />
