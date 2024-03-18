@@ -45,7 +45,7 @@ _The instructions below will help you get fully set up._
 
 1. Download <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2022 Community Edition</a> and install "ASP.NET and web developement", ".NET desktop developement", and "Data storage and processing" options.
 2. Download and Install <a href="https://dev.mysql.com/downloads/">MySqlServer</a>, then when prompted for a password for your localhost type "password".
-3. Download the entire zipped file from <a href="https://github.com/BT-Compile/JHA">GitHub</a>.
+3. Download the entire zipped file from <a href="https://github.com/BT-Compile/JHA">GitHub</a>and extract it where anywhere.
    <br />
    <br />
    <img src=./JHA/wwwroot/images/readme/download1.PNG />
@@ -60,8 +60,13 @@ _The instructions below will help you get fully set up._
 5. Once in your instance click on server on the toolbar at the top and click "Data Import".
 6. In the Data Import screen click on "Import from self contained file" and then click on the three dots to locate the "jha_hazard.sql" file provided with the .zip.
    Then click start import, once it is complete, refresh the schema bar to check if it is correctly imported. If 'jha' appears the local host server is set up!
-7. Then click on the jha.sln solution, this should open the codebase for inspection as well as allow you to run the application in the IDE.
-8. Finally, click on the start button at the top to start the environment and you should be all set!
+   <br />
+   <br />
+   <img src=./JHA/wwwroot/images/readme/SQL2.PNG />
+   <br />
+   <br />
+8. Then click on the jha.sln solution, this should open the codebase for inspection as well as allow you to run the application in the IDE.
+9. Finally, click on the start button at the top to start the environment and you should be all set!
    <br />
    <br />
    <img src=./JHA/wwwroot/images/readme/start.PNG />
