@@ -12,7 +12,7 @@
         <hr />
         @foreach (var name in Model.hazards)
         {
-            <div class="namecard text-center fontbebas" onclick="displayTaskInfo('@name.Name', '@name.Steps', '@name.Consequences', '@name.Controls', '@name.Training', '@name.Equipment')"
+            <div class="namecard text-center fontbebas" onclick="displayTaskInfo('@name.Author', '@name.Name', '@name.Steps', '@name.Consequences', '@name.Controls', '@name.Training', '@name.Equipment')"
                  onmouseover="highlight(this)" onmouseout="nothighlighted(this)">
                 <p>@name.Name</p>
             </div>
@@ -43,27 +43,31 @@
                 <form method="post" asp-page-handler="Create" asp-route-handler="OnPostCreate">
                     <input type="hidden" asp-for="@Model.newHazard" />
                     <div class="form-group">
-                        <label asp-for="@Model.newHazard.Name">Task Name</label>
+                        <label>Author Name</label>
+                        <textarea asp-for="@Model.newHazard.Author" id="txtauthor" class="form-control" rows="1" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Task Name</label>
                         <textarea asp-for="@Model.newHazard.Name" id="txtname" class="form-control" rows="1" required></textarea>
                     </div>
                     <div class="form-group">
-                        <label asp-for="@Model.newHazard.Steps">Steps to Complete</label>
+                        <label>Steps to Complete</label>
                         <textarea asp-for="@Model.newHazard.Steps" id="txtsteps" class="form-control" rows="3" required></textarea>
                     </div>
                     <div class="form-group">
-                        <label asp-for="@Model.newHazard.Consequences">Consquences of hazard</label>
+                        <label>Consquences of hazard</label>
                         <textarea asp-for="@Model.newHazard.Consequences" id="txtcons" class="form-control" rows="3"></textarea>
                     </div>
                     <div class="form-group">
-                        <label asp-for="@Model.newHazard.Controls">Controls</label>
+                        <label>Controls</label>
                         <textarea asp-for="@Model.newHazard.Controls" id="txtcontrols" class="form-control" rows="3"></textarea>
                     </div>
                     <div class="form-group">
-                        <label asp-for="@Model.newHazard.Training">Training</label>
+                        <label>Training</label>
                         <textarea asp-for="@Model.newHazard.Training" id="txttraining" class="form-control" rows="3"></textarea>
                     </div>
                     <div class="form-group">
-                        <label asp-for="@Model.newHazard.Equipment">Required Equipment</label>
+                        <label>Required Equipment</label>
                         <textarea asp-for="@Model.newHazard.Equipment" id="txtequip" class="form-control" rows="2"></textarea>
                     </div>
                     <button type="button" onclick="clearForm()" class="btn-dark">Clear</button>
@@ -83,9 +87,9 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form method="post" asp-page-handler="Edit" asp-route-handler="OnPostEdit">
-                    <label>Pick a Task to Edit</label>
-                    <select class="newlogfield dropbox" onchange="showFields(this)">
+                <form id="taskForm" method="post" asp-page-handler="Edit" asp-route-handler="OnPostEdit">
+                    <label>Please select a task to edit</label>
+                    <select class="newlogfield dropbox" id="taskSelect" asp-for="@Model.newHazard.ID">
                         <option value="">Select a Task</option>
                         @foreach (var hazard in Model.hazards)
                         {
@@ -93,36 +97,34 @@
                         }
                     </select>
                     <br />
-                    @foreach (var hazard in Model.hazards)
-                    {
-                        <div id="formFields_@hazard.ID" style="display: none;">
-                            <input asp-for="@hazard.ID" type="hidden" name="ID" value="@hazard.ID"/>
-                            <div class="form-group">
-                                <label>Rename</label>
-                                <textarea asp-for="@hazard.Name" class="form-control" rows="1" name="name" required>@hazard.Name</textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Steps to Complete</label>
-                                <textarea asp-for="@hazard.Steps" class="form-control" rows="3" name="steps" required>@hazard.Steps</textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Consequences of hazard</label>
-                                <textarea asp-for="@hazard.Consequences" class="form-control" rows="3" name="consequences">@hazard.Consequences</textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Controls</label>
-                                <textarea asp-for="@hazard.Controls" class="form-control" rows="3" name="controls">@hazard.Controls</textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Training</label>
-                                <textarea asp-for="@hazard.Training" class="form-control" rows="3" name="training">@hazard.Training</textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Required Equipment</label>
-                                <textarea asp-for="@hazard.Equipment" class="form-control" rows="2" name="equipment">@hazard.Equipment</textarea>
-                            </div>
-                        </div>
-                    }
+                    <div class="form-group">
+                        <label>Author Name</label>
+                        <textarea asp-for="@Model.newHazard.Author" class="form-control" rows="1" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Task Name</label>
+                        <textarea asp-for="@Model.newHazard.Name" class="form-control" rows="1" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Steps to Complete</label>
+                        <textarea asp-for="@Model.newHazard.Steps" class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Consquences of hazard</label>
+                        <textarea asp-for="@Model.newHazard.Consequences" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Controls</label>
+                        <textarea asp-for="@Model.newHazard.Controls" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Training</label>
+                        <textarea asp-for="@Model.newHazard.Training" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Required Equipment</label>
+                        <textarea asp-for="@Model.newHazard.Equipment" class="form-control"></textarea>
+                    </div>
                     <input type="submit" value="Submit" class="btn-dark" />
                 </form>
             </div>
@@ -160,6 +162,7 @@
     // Function to clear the form
     function clearForm() {
         document.getElementById("txtname").value = "";
+        document.getElementById("txtauthor").value = "";
         document.getElementById("txtsteps").value = "";
         document.getElementById("txtcons").value = "";
         document.getElementById("txtcontrols").value = "";
@@ -169,13 +172,14 @@
 
     // Used to display the information in relation to selected
     // Additionally, created to not bloat the HTML
-    function displayTaskInfo(name, steps, consequences, controls, training, equipment) {
+    function displayTaskInfo(author, name, steps, consequences, controls, training, equipment) {
         var infoHtml = 
-            "<h2 class='titletxt'>" + name + "<h2>" +
+            "<h2 class='titletxt' style='text-decoration: underline'>" + name + "<h2>" +
+            "<p class='smalltxt'>Written by " + author + "</p>" +
             "<h4 class='titletxt'>Steps to Complete this Task:</h4>" + steps +
             "<br /><br /><h4 class='titletxt'>Consequences:</h4>" + consequences +
-            "<br /><br /> <h4 class='titletxt'>Controls to Mitigate:</h4>" + controls +
-            "<br /><br /> <h4 class='titletxt'>Training:</h4>" + training +
+            "<br /><br /><h4 class='titletxt'>Controls to Mitigate:</h4>" + controls +
+            "<br /><br /><h4 class='titletxt'>Training:</h4>" + training +
             "<br /><br /><h4 class='titletxt'>Required Equipment:</h4>" + equipment;
         document.getElementById("info").innerHTML = infoHtml;
     }
@@ -190,21 +194,5 @@
     function nothighlighted(element) {
         element.style.background = ""
         element.style.color = ""
-    }
-
-    // Used to show data in relation to selected task when editing
-    function showFields(select) {
-        var selectedValue = select.value;
-        var formFieldsId = "formFields_" + selectedValue;
-        var formFields = document.getElementById(formFieldsId);
-        var allFormFields = document.querySelectorAll('[id^="formFields_"]');
-
-        allFormFields.forEach(function (field) {
-            field.style.display = "none";
-        });
-
-        if (selectedValue !== "") {
-            formFields.style.display = "block";
-        }
     }
 </script>

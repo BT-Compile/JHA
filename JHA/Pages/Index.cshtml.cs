@@ -13,8 +13,6 @@ namespace JHA.Pages
 
         public List<Data> hazards { get; set; }
 
-        public int numID;
-
         public IndexModel()
         {
             hazards = new List<Data>();
@@ -33,12 +31,13 @@ namespace JHA.Pages
                 hazards.Add(new Data
                 {
                     ID = data.GetInt32("id"),
+                    Author = data.GetString("author"),
                     Name = data.GetString("name"),
                     Steps = data.GetString("steps"),
                     Consequences = data.GetString("consequences"),
                     Controls = data.GetString("controls"),
                     Training = data.GetString("training"),
-                    Equipment = data.GetString("equip")
+                    Equipment = data.GetString("equipment")
                 });
             }
 
@@ -50,8 +49,8 @@ namespace JHA.Pages
         public IActionResult OnPostCreate()
         {
             // Query to add new task and corresponding data into database
-            string queryString = $"INSERT INTO hazard (name, steps, consequences, controls, training, equip) " +
-                                 $"VALUES ('{newHazard.Name}', '{newHazard.Steps}', '{newHazard.Consequences}', " +
+            string queryString = $"INSERT INTO hazard (author, name, steps, consequences, controls, training, equipment) " +
+                                 $"VALUES ('{newHazard.Author}', '{newHazard.Name}', '{newHazard.Steps}', '{newHazard.Consequences}', " +
                                  $"'{newHazard.Controls}', '{newHazard.Training}', '{newHazard.Equipment}')";
 
             // Execute the INSERT query
@@ -62,13 +61,13 @@ namespace JHA.Pages
             return RedirectToPage("./Index");
         }
 
-        public IActionResult OnPostEdit(int id, string name, string steps, string consequences, string controls, string training, string equipment)
+        public IActionResult OnPostEdit()
         {
             // Query to update all data left in the text fields within the editing modal
             // *Note* that if the user does not change anything it will overwrite the data with the same information
-            string queryString = $"UPDATE hazard SET Name = '{name}', Steps = '{steps}', Consequences = '{consequences}'," +
-                                 $" Controls = '{controls}', Training = '{training}', " +
-                                 $"Equip = '{equipment}' WHERE id = {id}";
+            string queryString = $"UPDATE hazard SET author = '{newHazard.Author}', name = '{newHazard.Name}', steps = '{newHazard.Steps}', consequences = '{newHazard.Consequences}'," +
+                                 $" controls = '{newHazard.Controls}', training = '{newHazard.Training}', " +
+                                 $" equipment = '{newHazard.Equipment}' WHERE id = {newHazard.ID}";
 
             // Execute the UPDATE query
             DBClass.dataInsert(queryString);
