@@ -43,7 +43,7 @@ Those issues will be outlined below as well as any relevant information that nee
 
 _The instructions below will help you get fully set up._
 
-1. Download Microsoft Visual Studio and install the default options.
+1. Download Microsoft Visual Studio and install "ASP.NET and web developement", ".NET desktop developement", and "Data storage and processing" options.
 2. Download and Install MySqlServer when prompted for a password for your localhost type "password".
 3. Download the entire zipped file from GitHub.
    <br />
