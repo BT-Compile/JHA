@@ -45,7 +45,7 @@ _The instructions below will help you get fully set up._
 
 1. Download <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2022 Community Edition</a> and install "ASP.NET and web developement", ".NET desktop developement", and "Data storage and processing" options.
 2. Download and Install <a href="https://dev.mysql.com/downloads/">MySqlServer</a>, then when prompted for a password for your localhost type "password".
-3. Download the entire zipped file from GitHub.
+3. Download the entire zipped file from <a href="https://github.com/BT-Compile/JHA">GitHub</a>.
    <br />
    <br />
    <img src=./JHA/wwwroot/images/readme/download1.PNG />
