@@ -51,7 +51,7 @@ _The instructions below will help you get fully set up._
    <img src=./JHA/wwwroot/images/readme/download1.PNG />
    <br />
    <br />
-4. Open MySqlServer open the local instance and enter the password you created for root in setup.
+4. Open MySqlServer, then open the local instance and enter the password you created for root in setup.
    <br />
    <br />
    <img src=./JHA/wwwroot/images/readme/SQL1.PNG />
