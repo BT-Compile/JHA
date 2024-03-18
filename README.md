@@ -8,7 +8,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="./JHA/wwwroot/images/display.PNG" />
+<img src="./JHA/wwwroot/images/readme/display.PNG" />
 
 Hello, hope you are doing well today! This is my submission for the technical challenge presented to me from Innovative Refrigeration Systems.
 I was given five days to complete this assessment and it was a fun and challenging scenario to complete. This web application was written in C# in ASP.NET Core
@@ -25,11 +25,6 @@ Those issues will be outlined below as well as any relevant information that nee
 * Originally, I had a script that would allow the data to populate and display all the textfields within the editing modal upon selecting a task, this ended up only allowing the ability to
   edit the first entry. For the sake of function over form, I reversed it to empty text boxes so that it works flawlessly.
 
-
-### Built With
-
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
