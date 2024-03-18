@@ -11,8 +11,8 @@
 <img src="./JHA/wwwroot/images/readme/display.PNG" />
 
 Hello, hope you are doing well today! This is my submission for the technical challenge presented to me from Innovative Refrigeration Systems.
-I was given five days to complete this assessment and it was a fun and challenging scenario to complete. This web application was written in C# in ASP.NET Core
-using CSS library Bootstrap and jQuery.
+I was given four days to complete this assessment and it was a fun and challenging scenario to complete. This web application was written in C# in ASP.NET Core
+using CSS libraries Bootstrap and jQuery.
 
 <br />
 While I did enjoy working on the project there is a few edge cases and issues I came across that I could not get to with my short time frame. 
@@ -37,15 +37,15 @@ Those issues will be outlined below as well as any relevant information that nee
 
 _The instructions below will help you get fully set up._
 
-1. Download <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2022 Community Edition</a> and install "ASP.NET and web developement", ".NET desktop developement", and "Data storage and processing" options.
-2. Download and Install <a href="https://dev.mysql.com/downloads/">MySqlServer</a>, then when prompted for a password for your localhost type "password".
+1. Download <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio</a> and install "ASP.NET and web developement", ".NET desktop developement", and "Data storage and processing" options.
+2. Download and Install <a href="https://dev.mysql.com/downloads/">MySqlServer</a>, then when prompted for a password for your localhost type "password", this is important as the connection strings use "password" to connect.
 3. Download the entire zipped file from <a href="https://github.com/BT-Compile/JHA">GitHub</a> and extract it anywhere.
    <br />
    <br />
    <img src=./JHA/wwwroot/images/readme/download1.PNG />
    <br />
    <br />
-4. Open MySqlServer, then open the local instance and enter the password you created for root in setup.
+4. Open MySqlServer, then open the local instance and enter "password" which was created for root in setup.
    <br />
    <br />
    <img src=./JHA/wwwroot/images/readme/SQL1.PNG />
@@ -59,8 +59,8 @@ _The instructions below will help you get fully set up._
    <img src=./JHA/wwwroot/images/readme/SQL2.PNG />
    <br />
    <br />
-8. Then click on the jha.sln solution, this should open the codebase for inspection as well as allow you to run the application in the IDE.
-9. Finally, click on the start button at the top to start the environment and you should be all set!
+8. Then click on the "jha.sln" solution in the unzipped file, this should open the codebase for inspection as well as allow you to run the application in the IDE.
+9. Finally, click on the start button at the top to start the web application and you should be all set!
    <br />
    <br />
    <img src=./JHA/wwwroot/images/readme/start.PNG />
