@@ -12,7 +12,8 @@
 
 Hello, hope you are doing well today! This is my submission for the technical challenge presented to me from Innovative Refrigeration Systems.
 I was given four days to complete this assessment and it was a fun and challenging scenario to complete. This web application was written in C# in ASP.NET Core
-using CSS libraries Bootstrap and jQuery.
+using CSS libraries Bootstrap and jQuery. Additionally, React.js was a considered option for improving the readability and compartmentalization of the front-end. I chose to not 
+implement the frameworks as although I am familiar with React, I am not familiar with React without back-end JavaScript.
 
 <br />
 While I did enjoy working on the project there is a few edge cases and issues I came across that I could not get to with my short time frame. 
